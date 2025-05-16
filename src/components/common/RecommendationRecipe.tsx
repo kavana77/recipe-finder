@@ -1,6 +1,6 @@
 import Text from "../ui/Text";
 import Clock from "../../assets/recommendationrecipe/clock.svg";
-import ForkKnife from "../../assets/recommendationrecipe/ForkKnife.svg";
+import ForkKnife from "../../assets/recommendationrecipe/forkKnife.svg";
 import { rrecipes } from "@/utils/constant";
 
 const RecommendationRecipe: React.FC = () => {
