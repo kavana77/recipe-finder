@@ -1,7 +1,7 @@
 import { recipes } from "@/utils/constant";
 import Text from "../ui/Text";
-import Clock from "../../assets/recommendationrecipe/clock.svg";
-import ForkKnife from "../../assets/recommendationrecipe/forkKnife.svg";
+import Clock from "../../assets/home/forkKnife.svg";
+import ForkKnife from "../../assets/home/forkKnife.svg";
 
 const Recipes = () => {
   return (
