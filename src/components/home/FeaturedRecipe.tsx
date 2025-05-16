@@ -3,10 +3,10 @@ import Button from "../ui/Button";
 import List from "../../assets/home/list.svg";
 import Text from "../ui/Text";
 import Clock from "../../assets/home/clock.svg";
-import ForkKnife from "../../assets/home/ForkKnife.svg";
+import ForkKnife from "../../assets/home/forkKnife.svg";
 import YouTube from "../../assets/home/youtube.svg";
 import Profile from "../../assets/recipe/profile.svg";
-import Badge from "../../assets/home/Badge.svg";
+import Badge from "../../assets/home/badge.svg";
 
 const FeaturedRecipe = () => {
   return (
