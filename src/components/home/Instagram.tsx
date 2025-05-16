@@ -3,7 +3,7 @@ import Post1 from "../../assets/instagrampost/post1.png";
 import Post2 from "../../assets/instagrampost/post2.png";
 import Post3 from "../../assets/instagrampost/post3.png";
 import Post4 from "../../assets/instagrampost/post4.png";
-import Profile from "../../assets/instagrampost/Oval.svg";
+import Profile from "../../assets/instagrampost/oval.svg";
 import Verify from "../../assets/instagrampost/verified.svg";
 
 const posts = [Post1, Post2, Post3, Post4];
