@@ -25,9 +25,9 @@ const PostHeader = () => {
         variant="muted"
         className="text-center text-sm sm:text-base px-2 sm:px-0 leading-relaxed"
       >
-        Lorem ipsum dolor sit, consectetur adipiscing elit. Curabitur ac ultrices
-        odio. Nulla at congue diam, at dignissim turpis. Ut vehicula sed velit a
-        faucibus. In feugiat vestibulum velit vel pulvinar.
+        Lorem ipsum dolor sit, consectetur adipiscing elit. Curabitur ac
+        ultrices odio. Nulla at congue diam, at dignissim turpis. Ut vehicula
+        sed velit a faucibus. In feugiat vestibulum velit vel pulvinar.
       </Text>
     </div>
   );

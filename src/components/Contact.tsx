@@ -10,7 +10,11 @@ const Contact = () => {
       <div className="flex flex-col lg:flex-row gap-10 max-w-screen-lg mx-auto">
         {/* Image Section */}
         <div className="hidden w-full lg:w-[300px] h-[450px] bg-gradient-to-b from-white to-[#dbf3f8] md:flex items-end justify-end">
-          <img src={Image} className="w-[200px] sm:w-[250px] h-[300px] sm:h-[350px] object-contain" alt="Contact Illustration" />
+          <img
+            src={Image}
+            className="w-[200px] sm:w-[250px] h-[300px] sm:h-[350px] object-contain"
+            alt="Contact Illustration"
+          />
         </div>
 
         {/* Form Section */}
@@ -27,7 +31,9 @@ const Contact = () => {
               />
             </div>
             <div className="flex flex-col">
-              <label className="text-sm font-semibold mb-1">EMAIL ADDRESS</label>
+              <label className="text-sm font-semibold mb-1">
+                EMAIL ADDRESS
+              </label>
               <input
                 type="email"
                 placeholder="Your email address..."

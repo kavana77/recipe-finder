@@ -1,7 +1,7 @@
 import { recipes } from "@/utils/constant";
 import Text from "../ui/Text";
 import Clock from "../../assets/recommendationrecipe/clock.svg";
-import ForkKnife from "../../assets/recommendationrecipe/ForkKnife.svg";
+import ForkKnife from "../../assets/recommendationrecipe/forkKnife.svg";
 
 const Recipes = () => {
   return (
@@ -12,8 +12,9 @@ const Recipes = () => {
           Simple and tasty recipes
         </Text>
         <Text variant="muted" className="text-sm text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
         </Text>
       </div>
 
@@ -29,7 +30,9 @@ const Recipes = () => {
                 className="w-full h-[180px] object-cover"
               />
               <div className="p-4">
-                <h2 className="font-semibold text-lg md:text-xl mb-2">{recipe.title}</h2>
+                <h2 className="font-semibold text-lg md:text-xl mb-2">
+                  {recipe.title}
+                </h2>
                 <div className="flex items-center text-sm text-gray-500 gap-4 flex-wrap">
                   <div className="flex items-center gap-1">
                     <img src={Clock} alt="Time" className="w-4 h-4" />

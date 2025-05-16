@@ -14,20 +14,44 @@ export default function LearnMore() {
         <Text variant="heading" className="mb-6 text-2xl md:text-4xl">
           Everyone can be a chef in their own kitchen
         </Text>
-        <Text variant="muted" className="mb-6 text-sm md:text-base text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        <Text
+          variant="muted"
+          className="mb-6 text-sm md:text-base text-gray-600"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam.
         </Text>
         <Button>Learn More</Button>
       </div>
 
       {/* Right Section */}
       <div className="relative w-full lg:w-1/2 flex justify-center items-center h-[400px] md:h-[500px] lg:h-[600px] bg-gradient-to-b from-[#fafafa] to-[#E7F9FD] rounded-lg overflow-hidden">
-        <img src={chef} alt="Chef" className="absolute w-[300px] md:w-[400px] lg:w-[500px] bottom-0" />
-        <img src={tomatoe} alt="Tomato" className="absolute w-10 h-10 bottom-10 left-10 animate-bounce" />
-        <img src={cabbage} alt="Cabbage" className="absolute w-16 h-16 top-52 right-10 animate-bounce " />
-        <img src={meat} alt="Meat" className="absolute w-16 h-16 top-34 left-14 animate-bounce" />
-        <img src={onion} alt="Onion" className="absolute w-10 h-10 top-24 right-24 animate-bounce" />
+        <img
+          src={chef}
+          alt="Chef"
+          className="absolute w-[300px] md:w-[400px] lg:w-[500px] bottom-0"
+        />
+        <img
+          src={tomatoe}
+          alt="Tomato"
+          className="absolute w-10 h-10 bottom-10 left-10 animate-bounce"
+        />
+        <img
+          src={cabbage}
+          alt="Cabbage"
+          className="absolute w-16 h-16 top-52 right-10 animate-bounce "
+        />
+        <img
+          src={meat}
+          alt="Meat"
+          className="absolute w-16 h-16 top-34 left-14 animate-bounce"
+        />
+        <img
+          src={onion}
+          alt="Onion"
+          className="absolute w-10 h-10 top-24 right-24 animate-bounce"
+        />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import Text from "../ui/Text";
 import Clock from "../../assets/recommendationrecipe/clock.svg";
-import ForkKnife from "../../assets/recommendationrecipe/ForkKnife.svg";
+import ForkKnife from "../../assets/recommendationrecipe/forkKnife.svg";
 import { moreRecipes } from "@/utils/constant";
 
 const MoreRecipe = () => {
@@ -12,7 +12,8 @@ const MoreRecipe = () => {
           Try this delicious recipe to make your day
         </Text>
         <Text variant="muted" className="text-sm text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Text>
       </div>
 

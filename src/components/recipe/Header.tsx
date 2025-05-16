@@ -78,23 +78,28 @@ const Header: React.FC = () => {
             {nutritionData.map((item, idx) => (
               <li key={idx} className="flex justify-between py-2">
                 <span className="text-gray-700 text-sm">{item.label}</span>
-                <span className="font-medium text-gray-900 text-sm">{item.value}</span>
+                <span className="font-medium text-gray-900 text-sm">
+                  {item.value}
+                </span>
               </li>
             ))}
           </ul>
           <Text variant="muted" className="text-center mt-10 text-sm">
-            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.
           </Text>
         </div>
       </div>
 
       {/* Description */}
       <Text variant="muted" className="text-sm sm:text-base leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
       </Text>
     </div>
   );

@@ -12,8 +12,10 @@ const Categories = () => {
         </Button>
       </div>
 
-      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex
-       gap-4">
+      <div
+        className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex
+       gap-4"
+      >
         {categoryItems.map((item) => (
           <div
             key={item.id}
