@@ -1,0 +1,39 @@
+import BreakFast from "../../assets/home/breakfast.svg"
+import Vegan from "../../assets/home/vegan.svg"
+import Meat from "../../assets/home/meat.svg"
+import Dessert from "../../assets/home/dessert.svg"
+import Lunch from "../../assets/home/lunch.svg"
+import Chocolate from "../../assets/home/chocolate.svg"
+import Text from "../ui/Text"
+type CategoriesItem = {
+    id: number;
+    image: string;
+    title: string;
+    gradient: string;
+    shadow: string;
+}
+const categoryItems: CategoriesItem[]=[
+    { id: 1, image: BreakFast, title: "Breakfast", gradient:"from-gray-50 to-gray-200", shadow:"" },
+    { id: 2, image: Vegan, title: "Vegan", gradient:"from-", shadow:"" },
+    { id: 3, image: Meat, title: "Meat", gradient:"", shadow:"" },
+    { id: 4, image: Dessert, title: "Dessert", gradient:"", shadow:"" },
+    { id: 5, image: Lunch, title: "Lunch", gradient:"", shadow:"" },
+    { id: 6, image: Chocolate, title: "Chocolate", gradient:"", shadow:""}
+]
+const Categories=()=>{
+    return(
+        <div className="w-full h-[342px] px-14">
+            <Text variant="heading">Categories</Text>
+            <div className="flex justify-between">
+                {categoryItems.map((item)=>(
+                    <div key={item.id} className={`w-[180px] h-[200px] rounded-4xl bg-gradient-to-b ${item.gradient} `}>
+                        <img src={item.image}/> 
+                        <p className="font-bold">{item.title}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+        
+    )
+}
+export default Categories

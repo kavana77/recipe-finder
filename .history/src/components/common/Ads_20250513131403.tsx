@@ -1,0 +1,7 @@
+export default function Ads(){
+    return(
+        <div className="w-[400px] h-[434px] bg-gradient-to-b from-[#357355] to-[#1D483B]">
+            <p className="" style={{ fontFamily: 'Lobster, cursive' }}>Don't forget to eat healthy food</p>
+        </div>
+    )
+}

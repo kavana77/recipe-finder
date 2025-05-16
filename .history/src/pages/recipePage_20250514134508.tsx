@@ -1,0 +1,17 @@
+import SubscribeCard from "@/components/common/SubscribeCard";
+import CookingSetup from "@/components/recipe/CookingSetup";
+import Header from "@/components/recipe/Header";
+import RecipeDetails from "@/components/recipe/recipeDetails/RecipeDetails";
+import RecommendationRecipe from "@/components/recipe/Recommendation";
+
+export default function RecipePage(){
+    return(
+        <>
+            <Header/>
+            <RecipeDetails/>
+            <CookingSetup/>
+            <SubscribeCard/>
+            <Recommendation/>
+        </>
+    )
+}
