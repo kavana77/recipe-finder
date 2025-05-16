@@ -1,6 +1,6 @@
 import Text from "../ui/Text";
-import Clock from "../../assets/recommendationrecipe/clock.svg";
-import ForkKnife from "../../assets/recommendationrecipe/forkKnife.svg";
+import Clock from "../../assets/home/clock.svg";
+import ForkKnife from "../../assets/home/forkKnife.svg"
 import { moreRecipes } from "@/utils/constant";
 
 const MoreRecipe = () => {
