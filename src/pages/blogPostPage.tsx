@@ -4,7 +4,7 @@ import PostHeader from "@/components/blogpost/PostHeader";
 import RecommendationRecipe from "@/components/common/RecommendationRecipe";
 import SubscribeCard from "@/components/common/SubscribeCard";
 
-export default function BlogPostPage(){
+const BlogPostPage=()=>{
     return(
         <>
         <PostHeader/>
@@ -15,3 +15,4 @@ export default function BlogPostPage(){
         </>
     )
 }
+export default BlogPostPage

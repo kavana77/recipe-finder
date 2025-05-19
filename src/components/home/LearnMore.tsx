@@ -6,7 +6,7 @@ import cabbage from "../../assets/learnmore/cabbage.png";
 import meat from "../../assets/learnmore/meat.png";
 import onion from "../../assets/learnmore/onion.png";
 
-export default function LearnMore() {
+const LearnMore=()=> {
   return (
     <div className="w-full flex flex-col lg:flex-row items-center px-4 md:px-10 lg:px-20 py-12 bg-[#FAFAFA]">
       {/* Left Section */}
@@ -56,3 +56,5 @@ export default function LearnMore() {
     </div>
   );
 }
+export default LearnMore
+

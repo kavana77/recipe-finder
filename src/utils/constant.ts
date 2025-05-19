@@ -176,7 +176,7 @@ export const categoryItems: ICategoriesItem[] = [
   },
 ];
 // common-recommendation
-export const rrecipes: IRecipe[] = [
+export const recommendationRecipes: IRecipe[] = [
   {
     id: 1,
     title: "Mixed Tropical Fruit Salad with Superfood Boosts",

@@ -1,7 +1,7 @@
 import BlogContent from "./BlogContent";
 import Share from "./Share";
 
-export default function Blog() {
+const Blog=()=> {
   return (
     <div className="flex flex-col lg:flex-row justify-between px-4 sm:px-6 lg:px-24 gap-8 mt-16">
       {/* Left Side */}
@@ -15,3 +15,4 @@ export default function Blog() {
     </div>
   );
 }
+export default Blog

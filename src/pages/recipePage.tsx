@@ -4,7 +4,7 @@ import CookingSetup from "@/components/recipe/CookingSetup";
 import Header from "@/components/recipe/Header";
 import RecipeDetails from "@/components/recipe/recipeDetails/RecipeDetails";
 
-export default function RecipePage(){
+const RecipePage=()=>{
     return(
         <>
             <Header/>
@@ -15,3 +15,4 @@ export default function RecipePage(){
         </>
     )
 }
+export default RecipePage

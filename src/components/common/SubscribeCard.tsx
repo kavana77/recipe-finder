@@ -4,11 +4,10 @@ import Salad from "../../assets/subscribecard/salad-vegetables-.png";
 import Potato from "../../assets/subscribecard/Photo-plate.png";
 import Rucola from "../../assets/subscribecard/rucola-png.png";
 
-export default function SubscribeCard() {
+const SubscribeCard=()=> {
   return (
     <div className="px-4 sm:px-10 md:px-14 overflow-hidden">
       <div className="bg-[#E7F9FD] w-full rounded-[2rem] relative flex flex-col items-center justify-center min-h-[400px] py-10">
-        {/* Decorative images - hidden on small screens */}
         <img
           src={Salad}
           className="absolute bottom-0 left-0 hidden md:block "
@@ -42,3 +41,4 @@ export default function SubscribeCard() {
     </div>
   );
 }
+export default SubscribeCard

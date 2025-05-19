@@ -1,7 +1,7 @@
 import Image from "../../assets/ads.svg";
 import Star from "../../assets/star.svg";
 
-export default function Ads() {
+const Ads=()=> {
   return (
     <div className="w-full max-w-[400px] h-auto bg-gradient-to-b from-[#357355] to-[#1D483B] px-4 py-6 rounded-lg mx-auto">
       <p
@@ -26,3 +26,4 @@ export default function Ads() {
     </div>
   );
 }
+export default Ads

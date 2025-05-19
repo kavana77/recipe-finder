@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Text from "../ui/Text";
 import FoodieLand from "../../assets/foodieland..png";
 
-export default function Footer() {
+const Footer=()=>{
   return (
     <footer className="w-full px-4 sm:px-8 md:px-14 mt-10 bg-white">
       {/* Upper Footer */}
@@ -76,3 +76,4 @@ export default function Footer() {
     </footer>
   );
 }
+export default Footer

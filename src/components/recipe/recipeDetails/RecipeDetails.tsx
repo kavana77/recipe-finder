@@ -2,7 +2,7 @@ import Ads from "../../common/Ads";
 import Ingredients from "./Ingredients";
 import OtherRecipe from "./OtherRecipe";
 
-export default function RecipeDetails() {
+const RecipeDetails=()=>{
   return (
     <div className="flex flex-col lg:flex-row justify-between gap-8 px-4 sm:px-8 lg:px-14 py-6">
       {/* Left Side */}
@@ -18,3 +18,4 @@ export default function RecipeDetails() {
     </div>
   );
 }
+export default RecipeDetails

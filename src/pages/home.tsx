@@ -6,7 +6,7 @@ import LearnMore from "@/components/home/LearnMore";
 import MoreRecipe from "@/components/home/MoreRecipe";
 import Recipes from "@/components/home/Recipes";
 
-export default function Home(){
+const Home=()=>{
     return(
         <>
         <FeaturedRecipe/>
@@ -19,3 +19,4 @@ export default function Home(){
         </>
     )
 }
+export default Home

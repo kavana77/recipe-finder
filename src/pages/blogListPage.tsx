@@ -3,7 +3,7 @@ import Pagination from "@/components/bloglist/Pagination";
 import Header from "@/components/bloglist/Header";
 import SubscribeCard from "@/components/common/SubscribeCard";
 
-export default function BlogListPage(){
+const BlogListPage=()=>{
     return(
         <>
             <Header/>
@@ -14,3 +14,4 @@ export default function BlogListPage(){
         </>
     )
 }
+export default BlogListPage

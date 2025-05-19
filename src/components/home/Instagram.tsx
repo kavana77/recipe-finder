@@ -8,7 +8,7 @@ import Verify from "../../assets/instagrampost/verified.svg";
 
 const posts = [Post1, Post2, Post3, Post4];
 
-export default function Instagram() {
+const Instagram=()=>{
   return (
     <div className="w-full bg-gradient-to-b from-[#fafafa] to-[#E7F9FD] py-20">
       {/* heading */}
@@ -127,3 +127,4 @@ export default function Instagram() {
     </div>
   );
 }
+export default Instagram

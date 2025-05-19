@@ -1,7 +1,7 @@
 import Text from "../ui/Text";
 import Clock from "../../assets/home/clock.svg";
 import ForkKnife from "../../assets/home/forkKnife.svg";
-import { rrecipes } from "@/utils/constant";
+import { recommendationRecipes } from "@/utils/constant";
 
 const RecommendationRecipe: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const RecommendationRecipe: React.FC = () => {
       </Text>
 
       <div className="flex flex-wrap justify-center md:justify-between gap-6">
-        {rrecipes.map((recipe) => (
+        { recommendationRecipes.map((recipe) => (
           <div
             key={recipe.id}
             className="w-full sm:w-[48%] md:w-[30%] bg-white rounded-3xl p-4 shadow-sm"

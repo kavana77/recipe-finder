@@ -1,7 +1,7 @@
 import Button from "../ui/Button";
 import Text from "../ui/Text";
 
-export default function Header() {
+const Header=()=> {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-6 mb-8 px-4 text-center">
       <Text variant="heading">Blog & Article</Text>
@@ -23,3 +23,4 @@ export default function Header() {
     </div>
   );
 }
+export default Header
