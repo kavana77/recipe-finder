@@ -43,3 +43,4 @@ export interface INutritionInfo {
   label: string;
   value: string;
 }
+

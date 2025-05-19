@@ -9,10 +9,10 @@ const Contact = () => {
       </Text>
       <div className="flex flex-col lg:flex-row gap-10 max-w-screen-lg mx-auto">
         {/* Image Section */}
-        <div className="hidden w-full lg:w-[300px] h-[450px] bg-gradient-to-b from-white to-[#dbf3f8] md:flex items-end justify-end">
+        <div className="hidden w-full lg:w-[500px] h-[450px] bg-gradient-to-b from-white to-[#dbf3f8] md:flex items-end justify-end">
           <img
             src={Image}
-            className="w-[200px] sm:w-[250px] h-[300px] sm:h-[350px] object-contain"
+            className="w-[200px] sm:w-[250px]  h-[300px] sm:h-[350px] object-contain "
             alt="Contact Illustration"
           />
         </div>

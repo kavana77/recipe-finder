@@ -4,6 +4,9 @@ import ForkKnife from "../../assets/home/forkKnife.svg"
 import { moreRecipes } from "@/utils/constant";
 
 const MoreRecipe = () => {
+  const onFavoriteClick=()=>{
+    alert("liked")
+  }
   return (
     <div className="w-full px-4 sm:px-6 md:px-10 lg:px-14 my-16">
       {/* Header Section */}
@@ -22,13 +25,16 @@ const MoreRecipe = () => {
         {moreRecipes.map((recipe, index) => (
           <div
             key={`${recipe.id}-${index}`}
-            className="rounded-3xl shadow hover:shadow-lg transition-shadow bg-white"
+            className="relative rounded-3xl shadow hover:shadow-lg transition-shadow bg-white"
           >
             <img
               src={recipe.image}
               alt={recipe.title}
               className="rounded-t-3xl w-full h-[180px] object-cover"
             />
+             <button 
+              onClick={onFavoriteClick}
+              className="absolute top-4 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer">❤</button>
             <div className="p-4">
               <h2 className="font-semibold text-base mb-2">{recipe.title}</h2>
               <div className="flex items-center text-sm text-gray-500 gap-4 flex-wrap">

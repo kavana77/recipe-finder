@@ -19,8 +19,12 @@ const Navbar = () => {
           <NavLink to="/contact" className="hover:text-red-500 transition duration-300 hover:scale-105">Contact</NavLink>
           <NavLink to="/about" className="hover:text-red-500 transition duration-300 hover:scale-105">About us</NavLink>
         </div>
+       
+         
+       
         {/* Social Icons */}
         <div className=" hidden md:flex gap-10 items-center text-black">
+        <NavLink to="/favourites">❤</NavLink>
           <a href="https://www.facebook.com/" >
             <svg
               xmlns="http://www.w3.org/2000/svg"

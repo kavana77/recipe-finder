@@ -4,6 +4,9 @@ import Clock from "../../assets/home/forkKnife.svg";
 import ForkKnife from "../../assets/home/forkKnife.svg";
 
 const Recipes = () => {
+  const onFavoriteClick=()=>{
+    alert("liked")
+  }
   return (
     <div className="w-full px-4 sm:px-6 md:px-10 lg:px-14 mt-16">
       {/* Heading */}
@@ -23,12 +26,15 @@ const Recipes = () => {
         {recipes.map((recipe, index) => (
           <div key={`${recipe.id}-${index}`}>
             {/* Recipe Card */}
-            <div className="rounded-3xl shadow hover:shadow-lg transition-shadow bg-white overflow-hidden">
+            <div className="relative rounded-3xl shadow hover:shadow-lg transition-shadow bg-white overflow-hidden">
               <img
                 src={recipe.image}
                 alt={recipe.title}
                 className="w-full h-[180px] object-cover"
               />
+                            <button 
+              onClick={onFavoriteClick}
+              className="absolute top-6 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer">❤</button>
               <div className="p-4">
                 <h2 className="font-semibold text-lg md:text-xl mb-2">
                   {recipe.title}
