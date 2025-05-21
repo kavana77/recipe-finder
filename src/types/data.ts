@@ -43,4 +43,12 @@ export interface INutritionInfo {
   label: string;
   value: string;
 }
+export interface RawRecipe {
+  id: number;
+  title: string;
+  image: string;
+  readyInMinutes?: number;
+  dishTypes?: string[];
+}
+
 

@@ -1,8 +1,8 @@
-import { useState } from "react";
 import Text from "../ui/Text";
+import useSearchStore from "@/store/searchStore";
 
 const Header=()=> {
-  const [searchQuery, setSearchQuery] = useState("")
+  const {searchQuery,setSearchQuery} = useSearchStore()
   const handleSearch=(e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
     alert(searchQuery)

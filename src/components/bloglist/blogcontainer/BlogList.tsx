@@ -5,6 +5,7 @@ const BlogList = () => {
   return (
     <div className="w-full max-w-3xl mx-auto">
       {blogList.map((list) => (
+
         <div key={list.id} className="flex flex-col sm:flex-row gap-4 sm:gap-8 my-6">
           <img
             src={list.image}
