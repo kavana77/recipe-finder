@@ -1,56 +1,53 @@
-// home-recipe
-import RecipeCard1 from "../assets/home/recipe/recipe1.png";
-import RecipeCard2 from "../assets/home/recipe/recipe2.png";
-import RecipeCard3 from "../assets/home/recipe/recipe3.png";
-import RecipeCard4 from "../assets/home/recipe/recipe4.png";
-import RecipeCard5 from "../assets/home/recipe/recipe5.png";
-import RecipeCard6 from "../assets/home/recipe/recipe6.png";
-import RecipeCard7 from "../assets/home/recipe/recipe7.png";
-import RecipeCard8 from "../assets/home/recipe/recipe8.png";
-import type { IRecipe } from "@/types/data";
-// home-morerecipe
-import Group5 from "../assets/home/group5.png";
-import Group6 from "../assets/home/group6.png";
-import Group7 from "../assets/home/group7.png";
-import Group8 from "../assets/home/group8.png";
-import type { IMoreRecipe } from "@/types/data";
-
-// bloglist-tastyrecipe
-import Card1 from "../assets/bloglist/tastycard1.png";
-import Card2 from "../assets/bloglist/tastycard2.png";
-import Card3 from "../assets/bloglist/tastycard3.png";
-import type { ITastyCards } from "@/types/data";
-// common-recommendation
-import Group1 from "../assets/recommendationrecipe/rgoup1.png";
-import Group2 from "../assets/recommendationrecipe/rgroup2.png";
-import Group3 from "../assets/recommendationrecipe/rgroup3.png";
-import Group4 from "../assets/recommendationrecipe/rgroup4.png";
-// home-categories
-import BreakFast from "../assets/home/breakfast.svg";
-import Vegan from "../assets/home/vegan.svg";
-import Meat from "../assets/home/meat.svg";
-import Dessert from "../assets/home/dessert.svg";
-import Lunch from "../assets/home/lunch.svg";
-import Chocolate from "../assets/home/chocolate.svg";
-import type { ICategoriesItem } from "@/types/data";
-// bloglist
-import List1 from "../assets/bloglist/list1.png";
-import List2 from "../assets/bloglist/list2.png";
-import List3 from "../assets/bloglist/list3.png";
-import List4 from "../assets/bloglist/list4.png";
-import List5 from "../assets/bloglist/list5.png";
-import List6 from "../assets/bloglist/list6.png";
-import Profile1 from "../assets/bloglist/profile1.svg";
-import Profile2 from "../assets/bloglist/profile2.svg";
-import Profile3 from "../assets/bloglist/profile3.svg";
-import Profile4 from "../assets/bloglist/profile4.svg";
-import Profile5 from "../assets/bloglist/profile5.svg";
-import Profile6 from "../assets/bloglist/profile6.svg";
-import type { IBlogList } from "@/types/data";
-// recipe-ingredient
-import type { IIngredient } from "@/types/data";
-// recipe-header
-import type { INutritionInfo } from "@/types/data";
+import {
+  Recipe1,
+  Recipe2,
+  Recipe3,
+  Recipe4,
+  Recipe5,
+  Recipe6,
+  Recipe7,
+  Recipe8,
+  Card1,
+  Card2,
+  Card3,
+  List1,
+  List2,
+  List3,
+  List4,
+  List5,
+  List6,
+  Group1,
+  Group2,
+  Group3,
+  Group4,
+  Group5,
+  Group6,
+  Group7,
+  Group8,
+} from "@/assets/images";
+import {
+  Meat,
+  Dessert,
+  Launch,
+  Chocolate,
+  Vegan,
+  BreakFast,
+  Profile1,
+  Profile2,
+  Profile3,
+  Profile4,
+  Profile5,
+  Profile6,
+} from "@/assets/icons";
+import type {
+  IRecipe,
+  IMoreRecipe,
+  ITastyCards,
+  ICategoriesItem,
+  IBlogList,
+  IIngredient,
+  INutritionInfo,
+} from "@/types/data";
 // recipe-header
 export const nutritionData: INutritionInfo[] = [
   { label: "Calories", value: "219.9 kcal" },
@@ -162,7 +159,7 @@ export const categoryItems: ICategoriesItem[] = [
   },
   {
     id: 5,
-    image: Lunch,
+    image: Launch,
     title: "Lunch",
     gradient: "from-white to-orange-100",
     shadow: "",
@@ -211,56 +208,56 @@ export const recipes: IRecipe[] = [
   {
     id: 1,
     title: "Big and Juicy Wagyu Beef Cheeseburger",
-    image: RecipeCard1,
+    image: Recipe1,
     time: "30 Minutes",
     category: "Snack",
   },
   {
     id: 2,
     title: "Fresh Lime Roasted Salmon with Ginger Sauce",
-    image: RecipeCard2,
+    image: Recipe2,
     time: "30 Minutes",
     category: "Fish",
   },
   {
     id: 3,
     title: "Strawberry Oatmeat Pancake with Honey Syrup",
-    image: RecipeCard3,
+    image: Recipe3,
     time: "30 Minutes",
     category: "Breafast",
   },
   {
     id: 4,
     title: "Fresh and Healthy Mixed Mayonnaise Salad",
-    image: RecipeCard4,
+    image: Recipe4,
     time: "30 Minutes",
     category: "Healthy",
   },
   {
     id: 5,
     title: "Chicken Meatballs with Cream Chees",
-    image: RecipeCard5,
+    image: Recipe5,
     time: "30 Minutes",
     category: "Meat",
   },
   {
     id: 6,
     title: "Fruity Pancake with Orange & Blueberry",
-    image: RecipeCard6,
+    image: Recipe6,
     time: "30 Minutes",
     category: "Sweet",
   },
   {
     id: 7,
     title: "The Best Easy One Pot Chicken and Rice",
-    image: RecipeCard7,
+    image: Recipe7,
     time: "30 Minutes",
     category: "Snack",
   },
   {
     id: 8,
     title: "The Creamiest Creamy Chicken and Bacon Pasta",
-    image: RecipeCard8,
+    image: Recipe8,
     time: "30 Minutes",
     category: "Noodlesr",
   },

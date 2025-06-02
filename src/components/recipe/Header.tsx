@@ -1,7 +1,7 @@
 import Text from "../ui/Text";
-import Image from "../../assets/recipe/header.png";
+import Image from "@/assets/images/header.png";
+import { Profile } from "@/assets/icons";
 import { Printer, Share } from "lucide-react";
-import Profile from "../../assets/recipe/profile.svg";
 import { FaClock, FaDrumstickBite } from "react-icons/fa";
 import { nutritionData } from "@/utils/constant";
 

@@ -1,14 +1,10 @@
 import Text from "../ui/Text";
-import Post1 from "../../assets/instagrampost/post1.png";
-import Post2 from "../../assets/instagrampost/post2.png";
-import Post3 from "../../assets/instagrampost/post3.png";
-import Post4 from "../../assets/instagrampost/post4.png";
-import Profile from "../../assets/instagrampost/oval.svg";
-import Verify from "../../assets/instagrampost/verified.svg";
+import { Post1, Post2, Post3, Post4 } from "@/assets/images";
+import { Oval, Verified } from "@/assets/icons";
 
 const posts = [Post1, Post2, Post3, Post4];
 
-const Instagram=()=>{
+const Instagram = () => {
   return (
     <div className="w-full bg-gradient-to-b from-[#fafafa] to-[#E7F9FD] py-20">
       {/* heading */}
@@ -30,12 +26,12 @@ const Instagram=()=>{
           >
             {/* post-top */}
             <div className="flex items-center p-2">
-              <img src={Profile} className="w-8 h-8" />
+              <img src={Oval} className="w-8 h-8" />
               <div className="ml-3">
                 <p className="text-sm font-semibold text-black">Foodieland.</p>
                 <p className="text-xs text-gray-500">Tokyo, Japan</p>
               </div>
-              <img src={Verify} className="ml-1" />
+              <img src={Verified} className="ml-1" />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5 text-gray-600 ml-auto"
@@ -126,5 +122,5 @@ const Instagram=()=>{
       </div>
     </div>
   );
-}
-export default Instagram
+};
+export default Instagram;

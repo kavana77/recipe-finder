@@ -1,12 +1,14 @@
-import Image from "../../assets/home/header.png";
+import { Home } from "@/assets/images";
+import {
+  Badge,
+  YouTube,
+  Profile,
+  Clock,
+  ForkKnife,
+  List,
+} from "@/assets/icons";
 import Button from "../ui/Button";
-import List from "../../assets/home/list.svg";
 import Text from "../ui/Text";
-import Clock from "../../assets/home/clock.svg";
-import ForkKnife from "../../assets/home/forkKnife.svg";
-import YouTube from "../../assets/home/youtube.svg";
-import Profile from "../../assets/recipe/profile.svg";
-import Badge from "../../assets/home/badge.svg";
 
 const FeaturedRecipe = () => {
   return (
@@ -21,7 +23,10 @@ const FeaturedRecipe = () => {
           Hot Recipes
         </Button>
 
-        <Text variant="heading" className="text-3xl md:text-6xl text-center md:text-left">
+        <Text
+          variant="heading"
+          className="text-3xl md:text-6xl text-center md:text-left"
+        >
           Spicy delicious chicken wings
         </Text>
 
@@ -61,14 +66,14 @@ const FeaturedRecipe = () => {
       {/* Right Section */}
       <div className="w-full md:w-1/2 relative hidden md:flex">
         <img
-          src={Image}
+          src={Home}
           alt="Dish"
           className="w-full h-full object-cover rounded-br-3xl rounded-tr-3xl"
         />
         <img
           src={Badge}
           alt="Badge"
-          className="hidden md:block absolute top-4 right-140"
+          className="hidden lg:block absolute top-4 right-140"
         />
       </div>
     </div>

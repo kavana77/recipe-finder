@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Text from "../ui/Text";
-import Image from "../../assets/recipe/ingredient.png";
-
+import { Ingredient } from "@/assets/images";
 const CookingSetup = () => {
   const [step1, setStep1] = useState(false);
   const [step2, setStep2] = useState(false);
@@ -40,7 +39,7 @@ const CookingSetup = () => {
             aliquam quaerat voluptatem.
           </p>
           <img
-            src={Image}
+            src={Ingredient}
             alt="Step visual"
             className="rounded-xl w-full object-cover mb-4"
           />

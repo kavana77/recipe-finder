@@ -1,5 +1,5 @@
 import Text from "@/components/ui/Text";
-import Post from "../../../assets/blogpost/contentpost.png";
+import { ContentPost } from "@/assets/images";
 const BlogContent = () => {
   return (
     <div className="w-full max-w-[920px] ">
@@ -19,7 +19,7 @@ const BlogContent = () => {
       </Text>
       <Text>Do you cook at home on your days off?</Text>
       <img
-        src={Post}
+        src={ContentPost}
         className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-cover rounded-3xl mt-8"
       />
       <Text className="mb-8 mt-4" variant="muted">

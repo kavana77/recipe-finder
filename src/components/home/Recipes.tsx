@@ -1,12 +1,11 @@
 import { recipes } from "@/utils/constant";
 import Text from "../ui/Text";
-import Clock from "../../assets/home/forkKnife.svg";
-import ForkKnife from "../../assets/home/forkKnife.svg";
+import { Clock, ForkKnife } from "@/assets/icons";
 
 const Recipes = () => {
-  const onFavoriteClick=()=>{
-    alert("liked")
-  }
+  const onFavoriteClick = () => {
+    alert("liked");
+  };
   return (
     <div className="w-full px-4 sm:px-6 md:px-10 lg:px-14 mt-16">
       {/* Heading */}
@@ -32,9 +31,12 @@ const Recipes = () => {
                 alt={recipe.title}
                 className="w-full h-[180px] object-cover"
               />
-                            <button 
-              onClick={onFavoriteClick}
-              className="absolute top-6 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer">❤</button>
+              <button
+                onClick={onFavoriteClick}
+                className="absolute top-6 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer"
+              >
+                ❤
+              </button>
               <div className="p-4">
                 <h2 className="font-semibold text-lg md:text-xl mb-2">
                   {recipe.title}

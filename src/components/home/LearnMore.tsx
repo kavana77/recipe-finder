@@ -1,12 +1,8 @@
 import Button from "../ui/Button";
 import Text from "../ui/Text";
-import chef from "../../assets/learnmore/chef.png";
-import tomatoe from "../../assets/learnmore/tomatoe.png";
-import cabbage from "../../assets/learnmore/cabbage.png";
-import meat from "../../assets/learnmore/meat.png";
-import onion from "../../assets/learnmore/onion.png";
+import { Cabbage, Chef, Meat, Onion, Tomato } from "@/assets/icons";
 
-const LearnMore=()=> {
+const LearnMore = () => {
   return (
     <div className="w-full flex flex-col lg:flex-row items-center px-4 md:px-10 lg:px-20 py-12 bg-[#FAFAFA]">
       {/* Left Section */}
@@ -28,33 +24,32 @@ const LearnMore=()=> {
       {/* Right Section */}
       <div className="relative w-full lg:w-1/2 flex justify-center items-center h-[400px] md:h-[500px] lg:h-[600px] bg-gradient-to-b from-[#fafafa] to-[#E7F9FD] rounded-lg overflow-hidden">
         <img
-          src={chef}
+          src={Chef}
           alt="Chef"
           className="absolute w-[300px] md:w-[400px] lg:w-[500px] bottom-0"
         />
         <img
-          src={tomatoe}
+          src={Tomato}
           alt="Tomato"
           className="absolute w-10 h-10 bottom-10 left-10 animate-bounce"
         />
         <img
-          src={cabbage}
+          src={Cabbage}
           alt="Cabbage"
           className="absolute w-16 h-16 top-52 right-10 animate-bounce "
         />
         <img
-          src={meat}
+          src={Meat}
           alt="Meat"
           className="absolute w-16 h-16 top-34 left-14 animate-bounce"
         />
         <img
-          src={onion}
+          src={Onion}
           alt="Onion"
           className="absolute w-10 h-10 top-24 right-24 animate-bounce"
         />
       </div>
     </div>
   );
-}
-export default LearnMore
-
+};
+export default LearnMore;

@@ -1,5 +1,4 @@
-import Post from "../../assets/blogpost/poster.png";
-
+import Post from '@/assets/images/poster.png'
 const Poster = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-14 my-8">

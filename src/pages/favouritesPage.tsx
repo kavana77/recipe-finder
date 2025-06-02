@@ -1,11 +1,13 @@
-import Text from "../ui/Text";
+import Text from "@/components/ui/Text";
 import { Clock, ForkKnife } from "@/assets/icons";
-import { recommendationRecipes } from "@/utils/constant";
 import useFavouritesStore from "@/store/favouritesStore";
 import type { IRecipe } from "@/types/data";
+import FavoriteInfo from "@/components/ui/FavoriteInfo";
+import type { ReactNode } from "react";
 
-const RecommendationRecipe: React.FC = () => {
-  const { addFavourite, removeFavourite, isFavourite } = useFavouritesStore();
+const Favourites = () => {
+  const { favourites, isFavourite, removeFavourite, addFavourite } =
+    useFavouritesStore();
 
   const toggleFavourite = (recipe: IRecipe) => {
     if (isFavourite(recipe.id)) {
@@ -14,15 +16,28 @@ const RecommendationRecipe: React.FC = () => {
       addFavourite(recipe);
     }
   };
-
+  if (favourites.length === 0) {
+    return (
+      <FavoriteInfo mode="hint">
+        Start adding recipes to your favorites and they will appear here.
+      </FavoriteInfo>
+    );
+  }
+  let warningBox: ReactNode;
+  if (favourites.length >= 3) {
+    warningBox = (
+      <FavoriteInfo mode="warning">You're limit had reached..</FavoriteInfo>
+    );
+  }
   return (
-    <div className="w-full px-4 sm:px-10 md:px-14 py-12">
-      <Text variant="heading" className="text-center py-6 mb-6">
-        Check out the delicious recipe
+    <div className="px-4 py-10 max-w-3xl mx-auto">
+      <Text variant="heading" className="mb-6 text-center">
+        My Favourite Recipes
       </Text>
 
+      {warningBox}
       <div className="flex max-sm:flex-wrap justify-center md:justify-between gap-4">
-        {recommendationRecipes.map((recipe) => {
+        {favourites.map((recipe) => {
           const liked = isFavourite(recipe.id);
 
           return (
@@ -68,4 +83,4 @@ const RecommendationRecipe: React.FC = () => {
   );
 };
 
-export default RecommendationRecipe;
+export default Favourites;

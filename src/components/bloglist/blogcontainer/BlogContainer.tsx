@@ -2,7 +2,7 @@ import Ads from "@/components/common/Ads";
 import BlogList from "./BlogList";
 import TastyRecipe from "./TastyRecipe";
 
-const BlogContainer=()=> {
+const BlogContainer = () => {
   return (
     <div className="flex flex-col lg:flex-row justify-between gap-8 px-4 sm:px-8 lg:px-14">
       {/* Left Side */}
@@ -17,5 +17,5 @@ const BlogContainer=()=> {
       </div>
     </div>
   );
-}
-export default BlogContainer
+};
+export default BlogContainer;

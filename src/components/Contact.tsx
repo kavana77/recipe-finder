@@ -1,7 +1,8 @@
 import Text from "./ui/Text";
-import Image from "../assets/contact.png";
-
+import Input from "./ui/Input";
+import Image from "@/assets/images/contact.png";
 const Contact = () => {
+  function handleSubmit() {}
   return (
     <div className="w-full min-h-screen px-4 sm:px-8 lg:px-14 mt-16">
       <Text variant="heading" className="text-center mb-7">
@@ -21,38 +22,30 @@ const Contact = () => {
         <form className="w-full space-y-6 bg-white">
           {/* Row 1: Name & Email */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex flex-col">
-              <label className="text-sm font-semibold mb-1">NAME</label>
-              <input
-                type="text"
-                placeholder="Enter your name..."
-                required
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label className="text-sm font-semibold mb-1">
-                EMAIL ADDRESS
-              </label>
-              <input
-                type="email"
-                placeholder="Your email address..."
-                required
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
-              />
-            </div>
+            <Input
+              id="name"
+              label="NAME"
+              type="text"
+              placeholder="Enter your name..."
+              required
+            />
+            <Input
+              id="email"
+              label="EMAIL ADDRESS"
+              type="email"
+              placeholder="Your email address..."
+              required
+            />
           </div>
 
           {/* Row 2: Subject & Enquiry */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex flex-col">
-              <label className="text-sm font-semibold mb-1">SUBJECT</label>
-              <input
-                type="text"
-                placeholder="Enter subject..."
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black"
-              />
-            </div>
+            <Input
+              id="subject"
+              label="SUBJECT"
+              type="text"
+              placeholder="Enter subject..."
+            />
             <div className="flex flex-col">
               <label className="text-sm font-semibold mb-1">ENQUIRY TYPE</label>
               <select
@@ -82,6 +75,7 @@ const Contact = () => {
             <button
               type="submit"
               className="bg-black text-white px-6 py-3 rounded-md hover:bg-gray-800 transition"
+              onClick={handleSubmit}
             >
               Submit
             </button>

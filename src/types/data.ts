@@ -1,9 +1,19 @@
+import type { ReactNode } from "react";
+
+export interface ICardProps {
+  children: ReactNode;
+  actions: ReactNode;
+}
+export interface IFavoriteProps {
+  mode: "hint" | "warning";
+  children: ReactNode;
+}
 export interface IRecipe {
   id: number;
   title: string;
   image: string;
-  time: string;
-  category: string;
+  time?: string;
+  category?: string;
 }
 export interface IMoreRecipe {
   id: number;
@@ -43,6 +53,7 @@ export interface INutritionInfo {
   label: string;
   value: string;
 }
+
 export interface RawRecipe {
   id: number;
   title: string;
@@ -50,5 +61,3 @@ export interface RawRecipe {
   readyInMinutes?: number;
   dishTypes?: string[];
 }
-
-

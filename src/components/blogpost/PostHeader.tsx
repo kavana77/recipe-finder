@@ -1,6 +1,5 @@
 import Text from "../ui/Text";
-import Profile from "../../assets/blogpost/profile.svg";
-
+import { Profile } from "@/assets/icons";
 const PostHeader = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-0 mt-16">

@@ -1,12 +1,12 @@
 import Text from "../ui/Text";
-import Clock from "../../assets/home/clock.svg";
-import ForkKnife from "../../assets/home/forkKnife.svg"
+import { Clock, ForkKnife } from "@/assets/icons";
 import { moreRecipes } from "@/utils/constant";
+import Card from "../ui/Card";
 
 const MoreRecipe = () => {
-  const onFavoriteClick=()=>{
-    alert("liked")
-  }
+  const onFavoriteClick = () => {
+    alert("liked");
+  };
   return (
     <div className="w-full px-4 sm:px-6 md:px-10 lg:px-14 my-16">
       {/* Header Section */}
@@ -23,18 +23,23 @@ const MoreRecipe = () => {
       {/* Recipe Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {moreRecipes.map((recipe, index) => (
-          <div
+          <Card
             key={`${recipe.id}-${index}`}
-            className="relative rounded-3xl shadow hover:shadow-lg transition-shadow bg-white"
+            actions={
+              <button
+                onClick={onFavoriteClick}
+                className="absolute top-4 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer"
+              >
+                ❤
+              </button>
+            }
           >
             <img
               src={recipe.image}
               alt={recipe.title}
               className="rounded-t-3xl w-full h-[180px] object-cover"
             />
-             <button 
-              onClick={onFavoriteClick}
-              className="absolute top-4 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer">❤</button>
+
             <div className="p-4">
               <h2 className="font-semibold text-base mb-2">{recipe.title}</h2>
               <div className="flex items-center text-sm text-gray-500 gap-4 flex-wrap">
@@ -48,7 +53,7 @@ const MoreRecipe = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </div>

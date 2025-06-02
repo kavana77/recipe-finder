@@ -7,7 +7,7 @@ import RecipePage from "./pages/recipePage"
 import BlogListPage from "./pages/blogListPage"
 import BlogPostPage from "./pages/blogPostPage"
 import ContactPage from "./pages/contactPage"
-import Favourites from "./pages/favourites"
+import Favourites from "./pages/favouritesPage"
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<RootLayout/>}>

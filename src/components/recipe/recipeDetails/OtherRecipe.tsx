@@ -1,6 +1,5 @@
 import Text from "@/components/ui/Text";
 import { tastyCard } from "@/utils/constant";
-
 const OtherRecipe: React.FC = () => {
   return (
     <div className="w-full max-w-md mx-auto px-4 sm:px-0">
