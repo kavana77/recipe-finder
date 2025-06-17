@@ -1,16 +1,10 @@
+import useSubscribeCar from "@/hooks/useSubscribeCard";
 import Button from "../ui/Button";
 import Text from "../ui/Text";
 import { Salad, PhotoPlate, Rucola } from "@/assets/images";
-import { useState } from "react";
 
 const SubscribeCard = () => {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-  const handleSubscribe = () => {
-    if (email.trim() !== "") {
-      setSubscribed(true);
-    }
-  };
+  const { handleSubscribe, subscribed, setEmail, email } = useSubscribeCar();
   return (
     <div className="px-4 sm:px-10 md:px-14 overflow-hidden">
       <div className="bg-[#E7F9FD] w-full rounded-[2rem] relative flex flex-col items-center justify-center min-h-[400px] py-10">

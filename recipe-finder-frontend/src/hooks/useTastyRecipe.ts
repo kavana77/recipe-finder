@@ -6,8 +6,10 @@ import type { ITastyCards } from "@/types/data";
 const useTastyRecipes = () => {
   const [recipes, setRecipes] = useState<ITastyCards[]>([]);
   const [error, setError] = useState<string | null>(null);
-  
-  const searchQuery = useSearchStore((state) => state.searchQuery.toLowerCase());
+
+  const searchQuery = useSearchStore((state) =>
+    state.searchQuery.toLowerCase()
+  );
 
   const filteredTastyCard = recipes.filter((card) =>
     card.title.toLowerCase().includes(searchQuery)

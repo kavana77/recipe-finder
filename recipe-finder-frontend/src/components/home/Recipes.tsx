@@ -1,11 +1,10 @@
 import { recipes } from "@/utils/constant";
 import Text from "../ui/Text";
 import { Clock, ForkKnife } from "@/assets/icons";
+import useFavourite from "@/hooks/useFavourite";
 
 const Recipes = () => {
-  const onFavoriteClick = () => {
-    alert("liked");
-  };
+ const  {toggleFavourite, isFavourite} = useFavourite()
   return (
     <div className="w-full px-4 sm:px-6 md:px-10 lg:px-14 mt-16">
       {/* Heading */}
@@ -22,7 +21,9 @@ const Recipes = () => {
 
       {/* Recipes Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {recipes.map((recipe, index) => (
+        {recipes.map((recipe, index) => {
+          const liked = isFavourite(recipe.id)
+        return(
           <div key={`${recipe.id}-${index}`}>
             {/* Recipe Card */}
             <div className="relative rounded-3xl shadow hover:shadow-lg transition-shadow bg-white overflow-hidden">
@@ -32,10 +33,11 @@ const Recipes = () => {
                 className="w-full h-[180px] object-cover"
               />
               <button
-                onClick={onFavoriteClick}
-                className="absolute top-6 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer"
+                onClick={()=>toggleFavourite(recipe)}
+                className={`absolute top-6 right-6 bg-gray-300 opacity-80 rounded-full hover:scale-120 cursor-pointer 
+                  ${ liked ? "text-red-500" : "text-gray-400"}`}
               >
-                ❤
+                {liked ? "❤️" : "🤍"}
               </button>
               <div className="p-4">
                 <h2 className="font-semibold text-lg md:text-xl mb-2">
@@ -54,7 +56,7 @@ const Recipes = () => {
               </div>
             </div>
           </div>
-        ))}
+        )})}
       </div>
     </div>
   );

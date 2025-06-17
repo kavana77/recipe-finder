@@ -1,19 +1,11 @@
 import Text from "../ui/Text";
 import { Clock, ForkKnife } from "@/assets/icons";
+import useFavourite from "@/hooks/useFavourite";
 import { recommendationRecipes } from "@/utils/constant";
-import useFavouritesStore from "@/store/favouritesStore";
-import type { IRecipe } from "@/types/data";
+
 
 const RecommendationRecipe: React.FC = () => {
-  const { addFavourite, removeFavourite, isFavourite } = useFavouritesStore();
-
-  const toggleFavourite = (recipe: IRecipe) => {
-    if (isFavourite(recipe.id)) {
-      removeFavourite(recipe.id);
-    } else {
-      addFavourite(recipe);
-    }
-  };
+ const {toggleFavourite, isFavourite} = useFavourite()
 
   return (
     <div className="w-full px-4 sm:px-10 md:px-14 py-12">

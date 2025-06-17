@@ -1,21 +1,14 @@
 import Text from "@/components/ui/Text";
 import { Clock, ForkKnife } from "@/assets/icons";
 import useFavouritesStore from "@/store/favouritesStore";
-import type { IRecipe } from "@/types/data";
 import FavoriteInfo from "@/components/ui/FavoriteInfo";
 import type { ReactNode } from "react";
+import useFavourite from "@/hooks/useFavourite";
 
 const Favourites = () => {
-  const { favourites, isFavourite, removeFavourite, addFavourite } =
-    useFavouritesStore();
+  const { favourites } = useFavouritesStore();
+  const { toggleFavourite, isFavourite } = useFavourite();
 
-  const toggleFavourite = (recipe: IRecipe) => {
-    if (isFavourite(recipe.id)) {
-      removeFavourite(recipe.id);
-    } else {
-      addFavourite(recipe);
-    }
-  };
   if (favourites.length === 0) {
     return (
       <FavoriteInfo mode="hint">
@@ -30,20 +23,20 @@ const Favourites = () => {
     );
   }
   return (
-    <div className="px-4 py-10 max-w-3xl mx-auto">
+    <div className="py-10 max-w-3xl mx-auto">
       <Text variant="heading" className="mb-6 text-center">
         My Favourite Recipes
       </Text>
 
       {warningBox}
-      <div className="flex max-sm:flex-wrap justify-center md:justify-between gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-col-4  gap-4">
         {favourites.map((recipe) => {
           const liked = isFavourite(recipe.id);
 
           return (
             <div
               key={recipe.id}
-              className="relative w-full sm:w-[48%] md:w-[30%] bg-white rounded-3xl p-4 shadow-sm"
+              className="relative w-full  bg-white rounded-3xl p-4 shadow-sm"
             >
               <img
                 src={recipe.image}
