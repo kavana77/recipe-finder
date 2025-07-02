@@ -9,13 +9,12 @@ on:
 jobs:
   build-and-lint:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ../frontend
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          path: project
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -23,10 +22,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: project/frontend
         run: npm install
 
       - name: Run lint
+        working-directory: project/frontend
         run: npm run lint
 
       - name: Build frontend
+        working-directory: project/frontend
         run: npm run build
