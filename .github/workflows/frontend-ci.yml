@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: recipe-finder
+        working-directory: frontend
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -25,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Lint
+      - name: Run lint
         run: npm run lint
 
-      - name: Build Project
+      - name: Build frontend
         run: npm run build
