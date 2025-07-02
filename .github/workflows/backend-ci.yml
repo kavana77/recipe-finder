@@ -1,0 +1,32 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        working-directory: recipe-finder-backend
+        run: npm install
+
+      - name: Run lint
+        working-directory: recipe-finder-backend
+        run: npm run lint
+
+      - name: Run build or start (optional)
+        working-directory: recipe-finder-backend
+        run: npm run build || echo "No build step"
