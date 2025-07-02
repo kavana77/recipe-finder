@@ -20,13 +20,13 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: frontend
+        working-directory: recipe-finder-frontend
         run: npm install
 
       - name: Run lint
-        working-directory: frontend
+        working-directory: recipe-finder-frontend
         run: npm run lint
 
       - name: Build frontend
-        working-directory: frontend
+        working-directory: recipe-finder-frontend
         run: npm run build
