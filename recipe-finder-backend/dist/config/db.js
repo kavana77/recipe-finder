@@ -15,11 +15,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const mongoUri = process.env.MONGODB;
+const mongoUri = process.env.MONGODB_URI;
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        if (!mongoUri) {
+            throw new Error("MongoDB URI not defined in environment variables");
+        }
         yield mongoose_1.default.connect(mongoUri);
-        console.log('Connected to Database');
+        console.log("Connected to Database");
     }
     catch (error) {
         console.error("MongoDB connection error", error);
