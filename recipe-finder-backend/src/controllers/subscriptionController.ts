@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
+import { RequestHandler} from "express";
 import Subscription from "../models/Subscription";
 import sendEmail from "../utils/sendEmail";
 
-export const sendSubscriptionEmail = async (req: Request, res: Response): Promise<void>=>{
+export const sendSubscriptionEmail: RequestHandler = async (req, res,next)=>{
    
     try {
         const {email} = req.body
@@ -32,7 +32,6 @@ export const sendSubscriptionEmail = async (req: Request, res: Response): Promis
         )
      res.status(201).json({message: "Subscribed successfully", newSub})
     } catch (error) {
-        console.error("Error in subscription:", error);
-         res.status(500).json({ message: "Something went wrong" });
+        next(error)
     }
 }

@@ -1,32 +1,33 @@
-import { Request, Response } from "express";
+import { RequestHandler} from "express";
 import Recipe from "../models/Recipe";
 
-export const createRecipe = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const createRecipe: RequestHandler = async (
+  req,
+  res,
+  next
+) => {
   try {
     const { title, author, image } = req.body;
     const newRecipe = await Recipe.create({ title, author, image });
     res.status(201).json({ message: "Recipe created successfully", newRecipe });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Failed to create recipe" });
-  }
+    next(error);
+}
 };
 
-export const getRecipes = async (
-  req: Request,
-  res: Response
-): Promise<void> => {
+export const getRecipes: RequestHandler = async (
+  req,
+  res,
+  next
+)=> {
   try {
     const recipes = await Recipe.find();
     res.status(200).json({ message: "Recipes: ", recipes });
   } catch (error) {
-    res.status(500).json({ error: "Failed to fetch recipes" });
-  }
+    next(error);
+}
 };
-export const searchRecipeByTitle = async (req: Request, res: Response) => {
+export const searchRecipeByTitle: RequestHandler = async (req, res,next) => {
   try {
     const title = req.query.title as string;
     const recipes = await Recipe.find({
@@ -34,6 +35,6 @@ export const searchRecipeByTitle = async (req: Request, res: Response) => {
     });
     res.status(201).json({ message: "Recipes", recipes });
   } catch (error) {
-    res.status(500).json({ error: "Failed to fetch recipes by title" });
-  }
+    next(error);
+}
 };

@@ -1,7 +1,7 @@
-import { Request, Response } from "express"
+import { RequestHandler } from "express"
 import sendEmail from "../utils/sendEmail"
 
-export const handleContactForm = async (req: Request, res: Response)=>{
+export const handleContactForm: RequestHandler = async (req, res,next)=>{
 
     try {
         const {name, email, subject, message} = req.body
@@ -23,7 +23,6 @@ export const handleContactForm = async (req: Request, res: Response)=>{
 
         res.status(200).json({message: "Message send successfully"})
     } catch (error) {
-        console.error("Error sending contact form message:", error)
-        res.status(500).json({message: "Internal server error"})
+        next(error)
     }
 }
