@@ -7,6 +7,4 @@ router.post('/addRecipes', createRecipe);
 router.get('/getRecipes', getRecipes)
 router.get('/getByTitle', searchRecipeByTitle)
 
-
-
 export default router;

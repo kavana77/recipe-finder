@@ -18,7 +18,7 @@ const createRecipe = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
     try {
         const { title, author, image } = req.body;
         const newRecipe = yield Recipe_1.default.create({ title, author, image });
-        res.status(201).json({ message: "Recipe created successfully", newRecipe });
+        res.status(200).json({ message: "Recipe created successfully", newRecipe });
     }
     catch (error) {
         next(error);
@@ -41,7 +41,7 @@ const searchRecipeByTitle = (req, res, next) => __awaiter(void 0, void 0, void 0
         const recipes = yield Recipe_1.default.find({
             title: { $regex: title, $options: "i" },
         });
-        res.status(201).json({ message: "Recipes", recipes });
+        res.status(200).json({ message: "Recipes", recipes });
     }
     catch (error) {
         next(error);
